@@ -21,22 +21,11 @@ var liste = new Werteliste(location.search);
 </script>
 </head>
 <body>
-<h1>Übergebene Daten</h1>
-
-<table border="1" cellpadding="5" cellspacing="0">
-  <tr>
-    <th>Feldname</th>
-    <td>Eintrag</td>
-  </tr>
   <script type="text/javascript">
-  for (var eigenschaft in liste) {
-    document.write(
-      "<tr><td>" + eigenschaft + "</td>" +
-      "<td><code>" + liste[eigenschaft] + "</code></td></tr>"
-    );
-  }
+    document.getElementById("topic").innerHTML = liste[0] + " " + liste[1] + " Shader";
+    document.getElementById("cl").innerHTML = "Kategorie: " + liste[2];
+    document.getElementById("desc").innerHTML = liste[3];
+    document.getElementById("dlb").innerHTML = "Download " + liste[4] + + " " + liste[1] " Shader";
   </script>
-</table>
-
 </body>
 </html>
